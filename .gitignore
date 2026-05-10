@@ -1,0 +1,33 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Python bytecode/compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Flask/Environment Secrets
+.env
+.flaskenv
+instance/
+
+# Databases (if using SQLite)
+*.sqlite3
+*.db
+chroma_db/
+
+# Distribution / Build
+dist/
+build/
+*.egg-info/
+
+# Unit test / Coverage reports
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Log files
+*.log
