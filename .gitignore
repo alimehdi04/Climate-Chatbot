@@ -31,3 +31,8 @@ htmlcov/
 
 # Log files
 *.log
+
+# Gunicorn
+/tmp/climate-rag.sock
+*.log
+/var/log/
