@@ -32,3 +32,5 @@ class Config:
 
     # Session
     SESSION_TTL        = int(os.getenv("SESSION_TTL_SECONDS", 86400))
+
+    LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
