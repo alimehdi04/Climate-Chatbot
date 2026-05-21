@@ -7,7 +7,7 @@ def run_ingestion():
     print("Starting ingestion...")
 
     chunks = parse_html_path_to_chunks(
-        path=Path("input/sample_ca_book.html"),
+        path=Path("input/climate_academy.html"),
         chunk_size=Config.CHUNK_SIZE,
         chunk_overlap=Config.CHUNK_OVERLAP
     )

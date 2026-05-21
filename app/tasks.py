@@ -1,4 +1,3 @@
-# app/tasks.py
 import redis as redis_lib
 from celery import Celery
 from config import Config
@@ -66,6 +65,16 @@ def process_chat(self, session_id: str, user_message: str) -> dict:
         }
         for p in passages
     ]
+
+# Only return sources if chunks were within threshold (not fallback results)
+# sources = [
+#     {
+#         "section_number": p["section_number"],
+#         "section_title":  p["section_title"]
+#     }
+#     for p in passages
+#     if p["distance"] < Config.DISTANCE_THRESHOLD
+# ]
 
     logger.info(f"Task complete — session: {session_id} | answer: {len(answer)} chars | sources: {len(sources)}")
     return {"status": "done", "answer": answer, "sources": sources}
